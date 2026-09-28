@@ -1,23 +1,60 @@
 aid: betaworks
+
 name: Betaworks
-description: 'Betaworks is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Betaworks is an American startup studio and venture capital firm that builds and invests in internet products. Founded in 2007, it has launched and supported companies such as Giphy, Dots, and Bitly. Betaworks operates as a hybrid incubator, providing capital, product expertise, and engineering resources to help startups grow. The studio focuses on media, messaging, and consumer internet services, aiming to create and scale innovative digital experiences.'
+
 url: https://raw.githubusercontent.com/api-evangelist/betaworks/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
 - Company
-apis: []
+- Startup
+- Venture Capital
+- Incubator
+- Media
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/betaworks-hosts.yml
+- type: Vendors
+  url: vendors/betaworks-vendors.yml
+- type: DomainSecurity
+  url: security/betaworks-domain-security.yml
 - type: Website
   url: https://forgeglobal.com/betaworks_stock/
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Betaworks website renders only via JavaScript and no machine‑readable API specification was found.
+  evidence:
+    - url: https://www.betaworks.com
+      status: 200
+  checked: '2026-09-28'
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
